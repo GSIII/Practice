@@ -1,0 +1,74 @@
+#percentages{
+    background-color: burlywood;
+    width: 400px;
+    height: 400px;
+}
+
+#percentages div {
+    background-color: dimgray;
+    /* 부모요소의 50%너비와 50%높이를 적용하겠다. */
+    width: 50%;
+    height: 50%;
+}
+
+h1 {
+    font-size: 40px;
+    border: 1px solid black;
+    /* 줄 간격을 200%로 설정하면 이 요소의 폰트 크기의 200%가 되어야 한다.*/
+    line-height: 200%;
+}
+
+#ems h2 {
+    /* h2의 폰트사이즈는 부모 태그인 article의 2배인 40px가 된다. */
+    font-size: 2em;
+    /* margin의 em은 요소의 글꼴 크기에 좌우된다. */
+    margin-left:1em
+}
+#ems p {
+    font-size: 0.8em;
+}
+
+#ems {
+    font-size: 20px;
+}
+
+/*button {
+    px로 지정했을 때는 요소의 글꼴 크기에 맞춘 변경이 불가능하다.
+    article전체가 커질 때 버튼도 커지게 하고 싶다면 em을 활용하자 
+    /* font-size: 30px;
+    padding: 0 30px;
+    border-radius: 15px;
+} */
+
+button {
+    font-size: 1em;
+    padding: 0 1em;
+    border-radius: 0.5em;
+}
+
+ul {
+    /* em의 단점은 단계별로 누적된다는 것이다. 
+    따라서 목록을 중첩시킬수록 단계적으로 커지거나 작아진다.
+    이를 해결하기 위해 rem을 이용하자*/
+    font-size: 1.5em;
+}
+
+/* rem은 루트 html요소의 글씨 크기에 따라 바뀐다. */
+
+#rems h2{
+    font-size: 3rem;
+}
+
+#rems h3 {
+    font-size: 2rem;
+}
+
+/* 중첩요소는 rem을 사용하자 */
+#rems ul {
+    font-size: 0.8rem;
+}
+
+/* 버튼같은 경우에는 em을 사용하는게 좀 더 좋은듯 하다.. */
+#rems button {
+    font-size: 1.5rem;
+}

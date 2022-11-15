@@ -1,0 +1,62 @@
+h1 {
+    background-color: #2a9d8f;
+    border: 5px solid #264653;
+    color: #eae2b7;
+    padding: 0.7em;
+    width: 300px;
+    font-size: 1.8em;
+    text-align:center;
+    /* 위아래로 20px씩 마진을 주고 가로줄은 가운데 정렬 
+    margin : auto는 인라인요소에서는 적용되지 못한다.*/
+    margin: 20px auto;
+    font-family: Courier New;
+    font-weight: lighter;
+}
+
+h1:nth-of-type(2n) {
+    background-color: #e9c46a;
+}
+h1:nth-of-type(3n) {
+    background-color: #f4a261;
+}
+h1:nth-of-type(4n) {
+    background-color: #e76f51;
+}
+
+/* 첫번째 section의 첫번째 h1 */
+section:first-of-type h1:nth-of-type(1){
+    /* transform-origin : 어떤 점을 기준으로 돌겠다
+    아래는 우측 상단을 가준으로 도는 것 */
+    /* transform-origin: top right; */
+    transform: rotate(45deg);
+}
+/* 첫번째ㅐ section의 두번째 h1 */
+section:first-of-type h1:nth-of-type(2){
+    transform: scale(0.6);
+}
+
+section:first-of-type h1:nth-of-type(3){
+    transform: translateX(200px);
+}
+section:first-of-type h1:nth-of-type(4){
+    transform: translate(-100px, 50px);
+}
+
+section:nth-of-type(2) h1:nth-of-type(1){
+    transform: skew(30deg);
+}
+section:nth-of-type(2) h1:nth-of-type(2){
+    transform: skew(10deg, 5deg);
+}
+
+section:nth-of-type(2) h1:nth-of-type(3){
+    transform: rotate(-20deg) scale(1.3);
+}
+section:nth-of-type(2) h1:nth-of-type(4){
+    transform: translateX(-500px) rotate(0.5turn) scaleY(1.5);
+}
+
+section:nth-of-type(2) {
+    /* 두번째 section에 있는 모든 것들을 transform할 수 도 있다.  */
+    transform: scale(0.7) translateX(500px);
+}

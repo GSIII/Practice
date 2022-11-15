@@ -1,0 +1,35 @@
+/* button {
+    display: block;
+    margin: 50px auto;
+} */
+
+body {
+    display: flex;
+    /* flex box에서 세로축을 기준으로 정렬 */
+    align-items: center;
+    /* flex box에서 가로축을 기준으로 정렬 */
+    justify-content: center;
+    /* 100퍼센트의 view high를 다 쓰고싶다. */
+    height: 100vh;
+    background-color: #151b29;
+}
+
+button {
+    background:none;
+    color:#ffa260;
+    border: 2px solid;
+    padding: 1em 2em;
+    font-size: 1em;
+    transition: all 0.25s;
+}
+
+button:hover {
+    border-color: #f1ff5c;
+    color : white;
+    box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+    transform: translateY(-0.25em);
+    /* button:hover에 transition속성을 주면 커서를 내렸을때 transition속성이
+    적용되지 않는다. 따라서 위 button에 transition속성을 주도록 하자. */
+    /* transition: all 0.25s; */
+    cursor: pointer;
+}

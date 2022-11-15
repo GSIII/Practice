@@ -1,0 +1,21 @@
+section{
+    width: 500px;
+    height: 500px;
+    background-color: magenta;
+}
+#rgba {
+    width: 50%;
+    height: 50%;
+    background-color: rgba(255,255,255,0.7);
+}
+
+/* opacity는 특정요소에 지정해서 그 해당 요소나 해당 요소의  콘텐츠 및 자손을 포함한
+전체 요소의 투명도를 결정하는 특성이다. */
+
+#opactiy {
+    width: 50%;
+    height: 50%;
+    background-color: yellow;
+    opacity: 0.3;
+}
+ 
