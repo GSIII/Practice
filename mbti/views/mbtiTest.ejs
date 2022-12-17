@@ -12,14 +12,11 @@
     <link rel="stylesheet" href="../static/css/mbtiTest.css">
     <script type="text/javascript" src="/static/data.json"></script>
 
-    <style>
-        /* .d-none{
-            display:block;
-        } */
-    </style>
+
 </head>
 
 <body>
+    <img src="../static/img/logo.png" alt="">
     <form>
         <div class="status">
             <div class="statusBar"></div>
@@ -27,14 +24,21 @@
         <div id="qBox"></div>
         <div id="aBox"></div>
     </form>
-    <div id="result"><button>결과보기</button></div>
+
+    <div id="result"><button onclick="loading();" id="result">결과보기</button></div>
 
 
     <script>
+        function loading(){
+            document.body.style.display="none"
+        }
+
         const endPoint = 20;//상태바 엔드포인트
         var no = 0;
+        document.getElementById('result').style.display="none"
         function goNext(a) {
-            if (no != qna.length - 1) {
+            if (no < qna.length-1) {
+                document.getElementById('result').style.display="none"
                 axios({
                     method: 'post',
                     url: '/test_type',
@@ -44,28 +48,30 @@
                 })
                     .then((response) => {
                         console.log(a.className);
-                        
+
                     })
                 no++;
                 showQuestion();
             }
+            else document.getElementById('result').style.display="block"
         }
         function showQuestion() {
-            document.getElementById("qBox").innerText =`Q${no+1} `+ qna[no].q;
+            
+            document.getElementById("qBox").innerText = `Q${no + 1} ` + qna[no].q;
             var html = "";
             for (var a of qna[no].a) {
                 html +=
                     `<button class="${a.type}" type="button" onclick="goNext(this);">${a.answer}</button>`;
-                // type = a.type;
             }
             document.getElementById("aBox").innerHTML = html;
-            
+
             // 상태바 코드
             var status = document.querySelector('.statusBar');
-            status.style.width = (100 / endPoint) * (no + 1)+ '%';
+            status.style.width = (100 / endPoint) * (no + 1) + '%';
+             
         }
         showQuestion();
-        
+
 
     </script>
 </body>
