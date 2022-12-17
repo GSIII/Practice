@@ -18,3 +18,7 @@ exports.test_type = (req, res) =>{
 exports.result=(req,res)=>{
   res.render('result');
 }
+
+exports.loading=(req,res)=>{
+  res.render('loading');
+}

@@ -12,5 +12,7 @@ router.post('/test_type', controller.test_type);
 
 router.get('/result',controller.result);
 
+router.get('/loading',controller.loading);
+
 
 module.exports = router;
