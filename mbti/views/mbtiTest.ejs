@@ -25,7 +25,7 @@
         <div id="aBox"></div>
     </form>
 
-    <div id="result"><button onclick="loading();" id="result">결과보기</button></div>
+    <div id="result"><button onclick="location.href='result'" id="result">결과보기</button></div>
 
 
     <script>
@@ -35,10 +35,10 @@
 
         const endPoint = 20;//상태바 엔드포인트
         var no = 0;
-        document.getElementById('result').style.display="none"
+        document.getElementById('result').style.display="none";//결과버튼
         function goNext(a) {
             if (no < qna.length-1) {
-                document.getElementById('result').style.display="none"
+                document.getElementById('result').style.display="none"//결과버튼
                 axios({
                     method: 'post',
                     url: '/test_type',
@@ -53,7 +53,7 @@
                 no++;
                 showQuestion();
             }
-            else document.getElementById('result').style.display="block"
+            else document.getElementById('result').style.display="block"//결과버튼
         }
         function showQuestion() {
             

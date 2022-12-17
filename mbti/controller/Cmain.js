@@ -14,3 +14,7 @@ exports.test_type = (req, res) =>{
   console.log(req.body.type);
   res.send(true);
 }
+
+exports.result=(req,res)=>{
+  res.render('result');
+}

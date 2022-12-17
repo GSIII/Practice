@@ -10,5 +10,7 @@ router.get('/mbtiTest',controller.mbtiTest);
 
 router.post('/test_type', controller.test_type);
 
+router.get('/result',controller.result);
+
 
 module.exports = router;
