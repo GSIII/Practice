@@ -65,3 +65,8 @@ body{
     font-size: 60px;
     transform: rotate(180deg);
 }
+.text{
+    position: absolute;
+    top: 70%;
+    font-size: 1.5em;
+}

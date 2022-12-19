@@ -36,7 +36,8 @@
         var no = 0;
         document.getElementById('result').style.display = "none";//결과버튼
         function goNext(a) {
-            if (no < qna.length - 1) {
+            if (no < qna.length -1 ) {
+                
                 document.getElementById('result').style.display = "none"//결과버튼
                 axios({
                     method: 'post',
@@ -52,6 +53,7 @@
                 no++;
                 showQuestion();
             }
+        
             else document.getElementById('result').style.display = "block"//결과버튼
         }
         function showQuestion() {
